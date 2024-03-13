@@ -4,14 +4,17 @@ describe("Should click on Link input", () => {
   beforeEach(() => {
     input.navigateInput();
   })
-  //it('Enter test text in the input', () => {
-  //const textInput = 'Text test';
-  //input.enterText(validatedText);
-  //input.checkExpectedText(validatedText);
-  //});
+  
   it("Should click button", () => {
     input.existTextInput();
     input.clickButton();
     //input.getMessageDblClickButton("You have done a click");
   });
+  
+  it('Debería reflejar el texto del input en el botón', () => {
+    const enterText = 'Test Text';
+    testPage.enterTextInput(enterText);
+    testPage.verifyTextButton(enterText);
 });
+
+  });
